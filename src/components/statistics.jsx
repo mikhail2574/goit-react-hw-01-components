@@ -1,27 +1,26 @@
 import "statistics.modal.css";
 import PropTypes from "prop-types";
 
-export const Statistics = ({ title, stats }) => { 
-    return (<section class="statistics">
-  <h2 class="title">Upload stats</h2>
+function renderList(stats) {
+    return stats.map(elem => {
+      const { title, percentage } = elem;
+      return `<li class="item">
+      <span class="label">${title}</span>
+      <span class="percentage">${percentage}</span>
+    </li>`;
+    }).join('');
+  }
 
-  <ul class="stat-list">
-    <li class="item">
-      <span class="label">.docx</span>
-      <span class="percentage">4%</span>
-    </li>
-    <li class="item">
-      <span class="label">.mp3</span>
-      <span class="percentage">14%</span>
-    </li>
-    <li class="item">
-      <span class="label">.pdf</span>
-      <span class="percentage">41%</span>
-    </li>
-    <li class="item">
-      <span class="label">.mp4</span>
-      <span class="percentage">12%</span>
-    </li>
+export const Statistics = ({ title, stats }) => {
+  let renderedList = renderList(stats);
+    return (<section className="statistics">
+      <h2 className="title">{title}</h2>
+      <ul className="stat-list" dangerouslySetInnerHTML={{ __html: renderedList }}>
   </ul>
 </section>)
- }
+}
+
+ Statistics.propTypes = {
+    title: PropTypes.string,
+    stats: PropTypes.array,
+}

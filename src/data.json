@@ -1,4 +1,10 @@
 [
-    {"format": "docx", "usage":"32%"},
-    {"format": "pdf", "usage":"4%"}
+  {
+    "title": ".docx",
+    "percentage": "25%"
+  },
+  {
+    "title": ".psd",
+    "percentage": "47%"
+  }
 ]
