@@ -4,7 +4,7 @@ import PropTypes from "prop-types";
 function createMarkup(data) {
     return (data.map(item => {
         const { id, type, amount, currency } = item;
-        return (<tr data-id="${id}">
+        return (<tr data-id={id}>
       <td>${type}</td>
       <td>${amount}</td>
       <td>${currency}</td>
