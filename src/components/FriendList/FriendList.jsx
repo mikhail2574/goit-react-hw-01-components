@@ -1,4 +1,4 @@
-import "friends.modal.css"
+import "./FriendList.module.css"
 import PropTypes from "prop-types";
 
 function createUser(data) {
@@ -16,7 +16,7 @@ function createUser(data) {
 
 export const FriendList = ({ data }) => {
     let renderedUsers = createUser(data);
-    return (<section className="friends-list"><ul className="friend-list" dangerouslySetInnerHTML={{ __html: renderedUsers }}>
+    return (<section className="styles.friends-list"><ul className="styles.friend-list" dangerouslySetInnerHTML={{ __html: renderedUsers }}>
     </ul></section>);
 }
 

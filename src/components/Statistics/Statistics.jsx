@@ -1,4 +1,4 @@
-import "statistics.modal.css";
+import "./Statistics.module.css";
 import PropTypes from "prop-types";
 
 function renderList(stats) {
@@ -13,9 +13,9 @@ function renderList(stats) {
 
 export const Statistics = ({ title, stats }) => {
   let renderedList = renderList(stats);
-    return (<section className="statistics">
-      <h2 className="title">{title}</h2>
-      <ul className="stat-list" dangerouslySetInnerHTML={{ __html: renderedList }}>
+    return (<section className="styles.statistics">
+      <h2 className="styles.title">{title}</h2>
+      <ul className="styles.stat-list" dangerouslySetInnerHTML={{ __html: renderedList }}>
   </ul>
 </section>)
 }

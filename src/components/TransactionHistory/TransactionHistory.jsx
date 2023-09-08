@@ -1,4 +1,4 @@
-import "transaction.modal.css"
+import "./TransactionHistory.module.css"
 import PropTypes from "prop-types";
 
 function createMarkup(data) {

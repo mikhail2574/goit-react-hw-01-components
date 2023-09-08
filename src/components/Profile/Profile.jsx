@@ -1,5 +1,5 @@
-import "profile.modal.css";
 import PropTypes from "prop-types";
+import "./Profile.module.css";
 
 export const Profile = ({ name, location, tag, avatar, followers, views, likes }) => {
   return (

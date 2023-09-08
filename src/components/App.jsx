@@ -1,12 +1,12 @@
-import user from 'user';
-import data from 'data';
-import friends from "friends";
-import transactions from "transactions"; 
-import { FriendList } from "./FriendList";
-import { Profile } from 'components/profile';
+import user from './data/user';
+import data from './data/data';
+import friends from "./data/friends";
+import transactions from "./data/transactions"; 
+import { FriendList } from "./FriendList/FriendList";
+import { Profile } from './Profile/Profile';
 import { Fragment } from 'react';
-import { Statistics } from './statistics';
-import { TransactionHistory } from './TransactionHistory';
+import { Statistics } from './Statistics/Statistics';
+import { TransactionHistory } from './TransactionHistory/TransactionHistory';
 
 export default function App() {
   return (
