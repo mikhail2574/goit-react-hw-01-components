@@ -1,22 +1,22 @@
-import "./FriendList.module.css"
+import css from "./FriendList.module.css"
 import PropTypes from "prop-types";
 
 function createUser(data) {
     return data.map(item => {
         const { avatar, name, isOnline, id } = item;
-        let online = isOnline ? "green" : "red"; 
-        return `<li class="stat-item" data-id=${id}>
-  <span class="status ${online}"></span>
-  <img class="avatar" src="${avatar}" alt="User avatar" width="48" />
-  <p class="name">${name}</p>
-</li>`;
-    }).join('');
+        let online = isOnline ? css.green : css.red; 
+        return (<li className={css.statItem} data-id={id}>
+  <span className={`${css.status} ${online}`}></span>
+            <img className={css.avatar} src={avatar} alt="User avatar" width="48" />
+            <p className={css.name}>{name}</p>
+</li>);
+    });
 
 }
 
 export const FriendList = ({ data }) => {
     let renderedUsers = createUser(data);
-    return (<section className="styles.friends-list"><ul className="styles.friend-list" dangerouslySetInnerHTML={{ __html: renderedUsers }}>
+    return (<section className={css.friendsList}><ul className={css.friendList}> {renderedUsers}
     </ul></section>);
 }
 

@@ -6,7 +6,7 @@
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
   margin-bottom: 100px;
 }
-.upper-container {
+.upperContainer {
   box-sizing: border-box;
   height: 300px;
   display: flex;
@@ -16,7 +16,7 @@
   align-items: center;
 }
 
-.upper-item {
+.upperItem {
   color: rgb(169, 164, 164);
 }
 
@@ -26,7 +26,7 @@
   border-radius: 50%;
 }
 
-.lower-container {
+.lowerContainer {
   height: 100px;
 }
 
@@ -37,7 +37,7 @@
   height: 100%;
 }
 
-.lower-item {
+.lowerItem {
   display: inline-block;
   width: 33%;
   height: 100%;

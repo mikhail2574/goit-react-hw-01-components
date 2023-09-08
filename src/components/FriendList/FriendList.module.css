@@ -1,17 +1,17 @@
-.friends-list {
+.friendsList {
   width: 600px;
   margin: 0 auto;
   margin-bottom: 100px;
 }
 
-.friend-list {
+.friendList {
   list-style-type: none;
   display: flex;
   flex-direction: column;
   gap: 10px;
 }
 
-.stat-item {
+.statItem {
   width: 100%;
   display: flex;
   align-items: center;
@@ -33,10 +33,10 @@
   background-color: gray;
 }
 
-.status.green {
+.green {
   background-color: green;
 }
 
-.status.red {
+.red {
   background-color: red;
 }
